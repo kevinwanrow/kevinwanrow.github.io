@@ -228,6 +228,7 @@ focus{
 
 .special{
     background: -webkit-linear-gradient(45deg, #7453CB, #3EA7E4 80%);
+    background: linear-gradient(45deg, #7453CB, #3EA7E4 80%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -246,6 +247,12 @@ focus{
 
 .start-main-container h1{
     color:var(--white);
+}
+
+.start-main-container h3{
+    font-weight:300;
+    color:#fff;
+    margin-top:50px;
 }
 
 .start-main-logo{
@@ -358,6 +365,11 @@ small{
     transform: translateX(-50%);
     text-align: center;
     /* margin-left:auto; */
+    opacity:1 !important;
+}
+
+.three-container p focus{
+    opacity:0;
 }
 
 .three-img-container{
@@ -381,6 +393,7 @@ small{
     height:50%;
     /* background:brown; */
     bottom:0;
+    transform: translateY(-50%);
 }
 
 .meet-center-from-top{
@@ -388,16 +401,60 @@ small{
     transition: transform ease-in-out 1s;
 }
 
-.meet-center-from-bottom{
-    transform: translateY(-50%);
+/* .meet-center-from-bottom{
     transition: transform ease-in-out 1s;
+} */
+
+.four-img-container{
+    width:100%;
+    height:100%;
+    background:url(assets/imgs/logo-flora.svg) bottom right no-repeat;
+    background-size:contain;
+    /* background:cyan; */
+    opacity:0;
 }
 
+#Five{
+    /* background:rgba(0, 255, 0, 0.205); */
+}
 
+.five-container{
+    /* background: cyan; */
+}
 
+.five-container p{
+    text-align:center;
+    width:100%;
+}
 
+.five-img-container{
+    width:100%;
+    height:100%;
+    background:url(assets/imgs/logo-start.svg) center center no-repeat;
+    background-size:40%;
+    opacity:0;
+}
 
+.sticky{
+    position: -webkit-sticky !important; /* Safari */
+    position: sticky !important;
+    top:50px;
+}
 
+.six-container{
+    height:fit-content !important;
+}
+
+.six-container p{
+    text-align:center;
+    width:100%;
+    color:var(--dark);
+}
+
+#Six{
+    background:#F7BC66;
+    background-image: linear-gradient(45deg, #f8f1c4, #F7BC66 80%);
+}
 
 
 
@@ -464,18 +521,13 @@ small{
         width:10px; 
      }
 
-     .start-main-logo{
-        background-size:300% !important;
-
-    }
-
     .two-container p{
         top:90% !important;
     }
 
     .three-container p{
-        bottom:20% !important;
-        font-size: 10pt !important;
+        bottom:10% !important;
+        font-size: 20pt !important;
     }
 
 }
@@ -487,9 +539,10 @@ small{
     }
 
     small{
-        width:100%;
+        /* width:100%;
         text-align: center;
-        left:0 !important;
+        left:0 !important; */
+        visibility: hidden !important;
     }
 
     h1{
@@ -508,18 +561,17 @@ small{
         text-align:center;
     }
     
+    .start-main-container h3{
+        text-align: center;
+        font-size:15pt;
+    }
 
     .start-main-logo{
         width:100%;
         height:100vh;
-        opacity:0.2;
-        background-position:top left;
-        background-size:200%;
-        -webkit-filter: blur(20px);
-        -moz-filter: blur(20px);
-        -o-filter: blur(20px);
-        -ms-filter: blur(20px);
-        filter: blur(20px);
+        opacity:0.15 !important;
+        background-position:50% -150% !important;
+        background-size:300%;
     }
 
     .section-container p{
@@ -561,7 +613,9 @@ small{
     }
 
     .three-container p{
-        bottom:35% !important;
+        bottom:20% !important;
+        font-size: 20pt !important;
+        width:200px;
     }
 
 }
@@ -570,5 +624,17 @@ small{
 @media only screen and (max-width: 1200px) {
     .start-main-logo{
         opacity:0.7;
+    }
+
+}
+
+@media only screen and (max-width: 1300px) {
+    .four-container p{
+        width:100%;
+        text-align:center;
+    }
+
+    .four-img-container{
+        background-position:center bottom;
     }
 }
