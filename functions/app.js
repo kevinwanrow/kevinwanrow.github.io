@@ -1,5 +1,8 @@
-$(document).ready(function(){
+$(window).on('beforeunload', function() {
+    $(window).scrollTop(0);
+});
 
+$(document).ready(function(){
 
 
     var doc = $('html, body');
@@ -56,12 +59,9 @@ $(document).ready(function(){
             }else if(array_sections_id.length === array_sections_length && array_top.length < array_sections_length){
                 Array_Offset_Top();
             }else if(array_sections_id.length === array_sections_length && array_top.length === array_sections_length){
-                // Sections_Animation();
+
             }
         }else{
-
-
-
 
 
 
@@ -180,23 +180,13 @@ $(document).ready(function(){
                 )
             }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            for(var j = 0; j < array_sections_length; j++){
+                if(scroll > array_top[j] - 300){
+                    let temp_arr = [ {el: array_containers_p[j] + ' focus', cl: 'special'},
+                     {el: array_containers[j] + ' h1 focus', cl: 'special'} ];
+                    Toggle_Class (temp_arr, true);
+                }
+            }
 
 
 
@@ -205,6 +195,82 @@ $(document).ready(function(){
 
             
     });
+
+
+
+
+
+    
+    setTimeout(ScrollNow, 1000);
+
+    function ScrollNow(){
+        $("small").addClass('small-text-display');
+    }
+
+    menuLink.click(function(){
+        menuContainer.toggleClass('menu-container-status');
+        doc.toggleClass('no-scroll');
+        menuBline.toggleClass('disappear');
+        menu.toggleClass('menu-line-animation');
+        navUpdate.toggleClass('disappear');
+    });
+
+    $(".dismiss").click(function(){
+        $(".nav-update").css({'top':'-60px'});
+    });
+
+
+
+
+
+
+
+
+    function Toggle_Class(Arr, condition){
+
+        Arr.forEach(e => {
+            try{
+                if(typeof e.el === 'string' && condition === true){
+                    Add_Class( $(e.el), e.cl );
+                }else if(typeof e.el === 'string' && condition === false){
+                    Remove_Class( $(e.el), e.cl );
+                }else if(typeof e.el !== 'string' && condition === true){
+                    Add_Class( e.el, e.cl );
+                }else if(typeof e.el !== 'string' && condition === false){
+                    Remove_Class( e.el, e.cl );
+                }else{
+                    console.log("");
+                }
+            }catch(erro){
+                console.log(error.message);
+            }
+        
+        });
+
+    }
+
+    function Add_Class(one, two){
+        one.addClass(two);
+    }
+
+    function Remove_Class(one, two){
+        one.removeClass(two);
+    }
+
+
+
+  
+
+
+
+
+});
+
+
+
+
+
+// Deprecated
 
 
     // while(array_sections_id.length === 0){
@@ -262,25 +328,6 @@ $(document).ready(function(){
     // var SevenTop = $(array_sections_names[7]).offset().top;
 
 
-    
-    setTimeout(ScrollNow, 2000);
-
-    function ScrollNow(){
-        $("small").addClass('small-text-display');
-    }
-
-    menuLink.click(function(){
-        menuContainer.toggleClass('menu-container-status');
-        doc.toggleClass('no-scroll');
-        menuBline.toggleClass('disappear');
-        menu.toggleClass('menu-line-animation');
-        navUpdate.toggleClass('disappear');
-    });
-
-    $(".dismiss").click(function(){
-        $(".nav-update").css({'top':'-60px'});
-    });
-
 
 
     // var ratio = 100;
@@ -328,41 +375,6 @@ $(document).ready(function(){
 
 
 
-
-    function Toggle_Class(Arr, condition){
-
-        Arr.forEach(e => {
-            try{
-                if(typeof e.el === 'string' && condition === true){
-                    Add_Class( $(e.el), e.cl );
-                }else if(typeof e.el === 'string' && condition === false){
-                    Remove_Class( $(e.el), e.cl );
-                }else if(typeof e.el !== 'string' && condition === true){
-                    Add_Class( e.el, e.cl );
-                }else if(typeof e.el !== 'string' && condition === false){
-                    Remove_Class( e.el, e.cl );
-                }else{
-                    console.log("");
-                }
-            }catch(erro){
-                console.log(error.message);
-            }
-        
-        });
-
-    }
-
-    function Add_Class(one, two){
-        one.addClass(two);
-    }
-
-    function Remove_Class(one, two){
-        one.removeClass(two);
-    }
-
-
-
-  
 
 
     // $(window).scroll(function(){
@@ -479,5 +491,3 @@ $(document).ready(function(){
 
 
     // });
-
-});
