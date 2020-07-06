@@ -11,7 +11,8 @@
     --black:#000;
     --white:#fff;
     --light:#fbfbfd;
-    --accent:#7453CB;
+    /* --accent:#372e6d; */
+    --accent:#F7BC66;
 }
 
 body{
@@ -225,6 +226,7 @@ h1{
 
 focus{
     font-weight:700;
+    color:var(--white);
 }
 
 .special{
@@ -233,8 +235,12 @@ focus{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
     color:var(--accent);
+    transition: all 2s ease-in-out;
 }
 
+.special-colored{
+    color:var(--dark);
+}
 
 
 
@@ -335,14 +341,14 @@ small{
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
-    
+    opacity:1;
     /* background:purple; */
 }
 
 
 .section-container p{
     font-weight:500;
-    opacity:0;
+    opacity:1;
     color:var(--white);
     font-size: 30pt;
     width:400px;
@@ -353,7 +359,6 @@ small{
     height:100%;
     background:url(assets/imgs/logo-faded.svg) top left no-repeat;
     background-size:contain;
-    opacity:0;
     /* background:cyan; */
 }
 
@@ -375,7 +380,7 @@ small{
 }
 
 .three-container p focus{
-    opacity:0;
+    /* opacity:0; */
 }
 
 .three-img-container{
@@ -417,7 +422,7 @@ small{
     background:url(assets/imgs/logo-flora.svg) bottom right no-repeat;
     background-size:contain;
     /* background:cyan; */
-    opacity:0;
+
 }
 
 #Five{
@@ -443,7 +448,6 @@ small{
 .logo-uncolored{
     background:url(assets/imgs/logo-start.svg) center center no-repeat;
     background-size:40%;
-    transition: all 1s ease-in-out;
 }
 
 .logo-colored{
@@ -461,6 +465,7 @@ small{
     position: -webkit-sticky !important; /* Safari */
     position: sticky !important;
     top:50px;
+    z-index:-2 !important;
 }
 
 .six-container{
@@ -471,8 +476,9 @@ small{
 .six-container p{
     text-align:center;
     width:100%;
-    color:var(--dark);
+    color:var(--light);
     opacity:1 !important;
+    font-weight:700;
 }
 
 #Six{
@@ -496,6 +502,17 @@ small{
     padding-top:60px;
 }
 
+.eight-img-container{
+    position: relative;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width: 100%;
+    height:100%;
+    background:url(assets/imgs/logo-and-type.svg) center center no-repeat;
+    background-size:50%;
+}
+
 .boxes-container{
     left:50%;
     transform:translateX(-50%);
@@ -513,22 +530,22 @@ small{
     background:var(--light);
     width:49.1%;
     height:600px;
-    border-radius:5px;
+    border-radius:10px;
 }
 
 .longbox{
     width: 98.8% !important;
 }
 
-.box1{
-    background:url(assets/imgs/BagScene.png) center center no-repeat;
+.box3{
+    background:url(assets/imgs/BagScene.png) center no-repeat;
     background-size: cover;
 }
 .box2{
-    background:url(assets/imgs/Examples/bg-2.jpg) center center no-repeat;
-    background-size: cover;
+    background-color: #D74848;
+    background-image: linear-gradient(45deg, #27204D, #130F25 80%);
 }
-.box3{
+.box1{
     background:url(assets/imgs/Examples/bg-3.jpg) center center no-repeat;
     background-size: cover;
 }
@@ -538,6 +555,15 @@ small{
 }
 
 .nine-container h1{
+    color:var(--white) !important;
+    text-align: center !important;
+}
+
+.ten-container{
+    height:fit-content !important;
+}
+
+.ten-container h1{
     color:var(--white) !important;
     text-align: center !important;
 }
@@ -671,7 +697,6 @@ small{
         font-size: 20pt;
         width:100%;
         font-weight:500;
-        opacity:0;
         text-align: center;
     }
 
