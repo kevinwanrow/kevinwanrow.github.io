@@ -10,8 +10,9 @@
     --dark:#131313;
     --black:#000;
     --white:#fff;
-    --light:#fbfbfd;
+    --light:#ecedfb;
     /* --accent:#372e6d; */
+    --grey: #4c4c4c;
     --accent:#F7BC66;
 }
 
@@ -575,6 +576,74 @@ small{
     text-align: center !important;
 }
 
+.eleven-container h1{
+    color:var(--white); text-align: center;
+    font-size:35pt;
+    /* font-style: italic; */
+    font-weight: 800;
+}
+
+.eleven-container p{
+    margin:0 auto;
+    color:var(--light); 
+    text-align: center; 
+    width:100%;
+    font-size:20pt;
+    padding-top:20px;
+    font-weight:200;
+    opacity:0.6;
+    /* font-style: italic; */
+
+}
+
+.eleven-container #LetsTalk{
+    position: relative;
+    left:50%;
+    transform:translateX(-50%);
+    text-align: center;
+    /* padding:20px 50px; */
+    border:none !important;
+    outline-style: none !important;
+    background:transparent;
+    color:var(--grey);
+    font-family:'Montserrat', sans-serif;
+    font-weight:600;
+    margin-top:40px;
+    width:300px;
+    font-size: 19pt;
+    /* border-bottom:3px solid var(--grey) !important; */
+    transition:all 0.5s ease-in-out; 
+    /* display:inline-block; */
+    /* float:none; */
+    vertical-align: middle;
+}
+
+#LetsTalk:hover{
+    transition:all 0.5s ease-in-out; 
+    cursor:pointer;
+    color:var(--white);
+}
+
+#LetsTalk::after{
+    content:'';
+    /* position: relative; */
+    width:20px;
+    height:20px;
+    background:url(assets/icons/letstalk-grey.svg) center center no-repeat;
+    background-size:contain;
+    display:inline-flex;
+    /* padding-left:300px; */
+    transition:all 0.5s ease-in-out; 
+    padding-top:0px;
+}
+
+
+
+
+#LetsTalk:hover::after{
+    transition:all 0.5s ease-in-out; 
+    background:url(assets/icons/letstalk-white.svg) center center no-repeat;
+}
 
 @keyframes gradient {
     0% {
@@ -707,6 +776,13 @@ small{
         text-align: center;
     }
 
+    .eleven-container p{
+        width:100%;
+        font-size:14pt;
+        padding-top:20px;
+        font-weight:100;
+    }
+
     .two-img-container{
         background-position: center center !important
     }
@@ -758,6 +834,10 @@ small{
         height:100vh;
         background:url(assets/text/tothenbesubmerged-mobile.svg) center center no-repeat;
         background-size: contain;
+    }
+
+    .eleven-container button{
+        width:200px;
     }
 
 }
