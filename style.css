@@ -546,7 +546,7 @@ small{
 }
 
 .box3{
-    background:url(assets/imgs/BagScene.jpg) center no-repeat;
+    background:url(assets/imgs/BagScene.jpg) center bottom no-repeat;
     background-size: cover;
 }
 .box2{
@@ -730,6 +730,10 @@ small{
     .box{
         width:100%;
         height:300px;
+    }
+
+    .longbox{
+        width: 100% !important;
     }
 
 
