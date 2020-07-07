@@ -1,6 +1,6 @@
-// $(window).on('beforeunload', function() {
-//     $(window).scrollTop(0);
-// });
+$(window).on('beforeunload', function() {
+    $(window).scrollTop(0);
+});
 
 $(document).ready(function(){
 
@@ -22,10 +22,7 @@ $(document).ready(function(){
     var array_containers_p = [];
     var array_containers_img = [];
     var array_top = [];
-    
-    var def = new $.Deferred();
 
-    
     function Create_Sections_Arrays(){
 
         for(var i = 0; i < array_sections_length; i++){
@@ -241,7 +238,7 @@ $(document).ready(function(){
                 }else{
                     console.log("");
                 }
-            }catch(erro){
+            }catch(error){
                 console.log(error.message);
             }
         
