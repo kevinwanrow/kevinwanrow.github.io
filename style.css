@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 
 *{
     margin:0;
@@ -16,10 +17,23 @@
     --accent:#F7BC66;
 }
 
+
+html,body{
+    transition: ease-in-out 0.2s all;
+}
+
 body{
     font-family: 'Montserrat', sans-serif;
     background: var(--black);
     -webkit-font-smoothing: antialiased;
+}
+
+a{
+    color:inherit !important;
+}
+
+a:hover{
+    color:inherit !important
 }
 
 .nav{
@@ -48,6 +62,10 @@ body{
     color:#fff;
     font-weight: 700;
     padding-left:15px;
+}
+
+.nav-logo:hover{
+    cursor: pointer;
 }
 
 .nav-items{
@@ -103,7 +121,7 @@ body{
     z-index:-1;
     background:var(--dark);
     opacity:0;
-    transition: opacity ease-in-out 0.5s, z-index ease-in-out 0.5s;
+    transition: opacity ease-in-out 0.3s, z-index ease-in-out 0.3s;
 }
 
 .no-scroll{
@@ -222,12 +240,21 @@ section{
 h1{
     font-weight: 300;
     font-size:50pt;
+    font-family: 'DM Serif Display', serif;
 }
 
 
 focus{
     font-weight:700;
     color:var(--white);
+}
+
+.section-container p{
+    font-family: 'DM Serif Display', serif;
+}
+
+.fancy{
+    font-family: 'DM Serif Display', serif;
 }
 
 .special{
@@ -495,13 +522,18 @@ small{
     background-image: linear-gradient(45deg, #f8f1c4, #F7BC66 80%);
 }
 
-#Eight{
+#Mockups{
     height:fit-content !important;
-    background:var(--white);
+    /* background:var(--white); */
     padding-bottom:60px;
 }
 
-#Eight p{
+.light{
+    background:var(--white) !important;
+    transition:all ease-in-out 0.5s;
+}
+
+#Mockups p{
     font-weight:500;
     font-size: 30pt;
     color:var(--dark);
@@ -510,7 +542,7 @@ small{
     padding-top:60px;
 }
 
-.eight-img-container{
+.mockups-img-container{
     position: relative;
     top:50%;
     left:50%;
@@ -546,7 +578,7 @@ small{
 }
 
 .box3{
-    background:url(assets/imgs/BagScene.jpg) center bottom no-repeat;
+    background:url(assets/imgs/BagScene.jpg) center center no-repeat;
     background-size: cover;
 }
 .box2{
@@ -558,20 +590,20 @@ small{
     background-size: cover;
 }
 
+.eight-container{
+    height:fit-content !important;
+}
+
+.eight-container h1{
+    color:var(--white) !important;
+    text-align: center !important;
+}
+
 .nine-container{
     height:fit-content !important;
 }
 
 .nine-container h1{
-    color:var(--white) !important;
-    text-align: center !important;
-}
-
-.ten-container{
-    height:fit-content !important;
-}
-
-.ten-container h1{
     color:var(--white) !important;
     text-align: center !important;
 }
@@ -645,6 +677,20 @@ small{
     background:url(assets/icons/letstalk-white.svg) center center no-repeat;
 }
 
+
+#Nine p{
+    position: absolute;
+    bottom:50px;
+    color:var(--grey); 
+    font-size:9pt; 
+    width:100%; 
+    text-align: center; 
+    height:fit-content;
+}
+
+
+
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -677,8 +723,6 @@ small{
 
 
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
@@ -688,6 +732,12 @@ small{
 
     .start-main-container{
         width:250px !important;
+    }
+
+    .nav-update-text{
+        color:var(--white);
+        line-height:60px;
+        font-size:6pt !important;
     }
 }
 
@@ -700,7 +750,7 @@ small{
     .nav-update-text{
         color:var(--white);
         line-height:60px;
-        font-size:7pt;
+        font-size:8pt;
     }
     .nav-update-text img{
         width:10px; 
@@ -713,6 +763,10 @@ small{
     .three-container p{
         bottom:10% !important;
         font-size: 20pt !important;
+    }
+
+    #Nine p{
+        font-size:8pt; 
     }
 
 }
@@ -823,13 +877,13 @@ small{
         width:200px;
     }
 
-    #Eight p{
+    #Mockups p{
         margin:0 auto;
         width:90%;
         font-size: 20pt;
     }
 
-    #Eight p focus{
+    #Mockups p focus{
         color:var(--accent);
     }
 

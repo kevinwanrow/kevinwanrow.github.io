@@ -15,7 +15,7 @@ $(document).ready(function(){
 
     var Start = $("#Start");
     
-    var array_sections_names = ["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten"];
+    var array_sections_names = ["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"];
     var array_sections_length = array_sections_names.length;
     var array_sections_id = [];
     var array_containers = [];
@@ -61,6 +61,7 @@ $(document).ready(function(){
         }else{
 
 
+            Array_Offset_Top();
 
             if (scroll >= array_top[3] - 150) {
                 let arr_sticky = [{
@@ -183,6 +184,15 @@ $(document).ready(function(){
                      {el: array_containers[j] + ' h1 focus', cl: 'special'} ];
                     Toggle_Class (temp_arr, true);
                 }
+            }
+
+
+            var mockups_offset = $("#Mockups").offset().top;
+            var mockups_height = $("#Mockups").height();
+            if(scroll >= array_top[7] + ( $(array_sections_id[7]).height() / 2 ) && scroll < mockups_offset + ( mockups_height / 2 ) + ( mockups_height / 4 ) ){
+                $("html, body").addClass('light');
+            }else{
+                $("html, body").removeClass('light');
             }
 
 
