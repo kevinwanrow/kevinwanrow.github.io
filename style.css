@@ -30,6 +30,7 @@ body{
 
 a{
     color:inherit !important;
+    text-decoration: none;
 }
 
 a:hover{
@@ -582,11 +583,11 @@ small{
     background-size: cover;
 }
 .box2{
-    background-color: #D74848;
+    background-color: #27204D;
     background-image: linear-gradient(45deg, #27204D, #130F25 80%);
 }
 .box1{
-    background:url(assets/imgs/Examples/bg-3.jpg) center center no-repeat;
+    background:url(assets/imgs/RingBox-Lafleur.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -688,6 +689,25 @@ small{
     height:fit-content;
 }
 
+.email{
+    position: relative;
+    color:var(--white);
+    margin-top:50px;
+    border-bottom: 1px solid var(--accent);
+    padding:10px 0px;
+    text-align: center;
+    left:50%;
+    transform: translateX(-50%);
+    width:fit-content;
+    transition:all ease-in-out 0.3s;
+
+}
+
+.email:hover{
+    color:var(--accent);
+    transition:all ease-in-out 0.3s;
+    cursor:pointer;
+}
 
 
 
@@ -737,7 +757,7 @@ small{
     .nav-update-text{
         color:var(--white);
         line-height:60px;
-        font-size:6pt !important;
+        font-size:7pt !important;
     }
 }
 
